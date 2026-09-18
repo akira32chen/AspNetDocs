@@ -1,0 +1,14 @@
+{
+  "name": "ASP.NET 4.x Docs (DocFX)",
+  "install": "bash .cursor/install.sh",
+  "terminals": [
+    {
+      "name": "docfx-preview",
+      "description": "Builds the ASP.NET docs with DocFX and serves the rendered site at http://localhost:8080 for local preview. Rebuild by restarting this terminal after editing Markdown.",
+      "command": "cd aspnet && rm -rf _site obj && docfx build docfx.json -t default,/usr/local/share/docfx-preview-template && docfx serve _site --hostname 0.0.0.0 --port 8080"
+    }
+  ],
+  "ports": [
+    { "name": "docfx preview", "port": 8080 }
+  ]
+}
